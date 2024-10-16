@@ -18,8 +18,7 @@
 
 ## Description
 
-**Crypto Converter** is a simple PHP application that allows users to convert amounts between different cryptocurrencies. The application uses HTML forms to gather user input and processes it using PHP.
-
+**Crypto Converter** is a  PHP application that allows users to convert amounts between different cryptocurrencies. 
 ## Technologies Used
 
 ![PHP](https://img.shields.io/badge/PHP-Backend-blue) 
