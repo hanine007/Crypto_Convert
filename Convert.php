@@ -9,16 +9,24 @@
     <?php
     
 
-    
-    $value=$_POST["amount"];
+    // this to post value from the body of the html
+    $amount=$_POST["amount"];
     $crypto=$_POST["crypto"];
-    if(isset($crypto) && isset($value)){
-echo"<p> You want to convert $value $crypto</p>"   ; 
+    if(isset($crypto) && isset($amount)){// if they sent
+echo"<p> You want to convert $amount $crypto</p>"   ; 
     }
     else{
        echo "You don't have the value";
    }
-    
+    // require for include the other files
+    require_once 'classes/Convertor.php';
+
+   $object= new Convert($crypto);// new object with the current crypto selected
+   $result= $object->convert($amount);//we will apply the convert method to the object 
+    echo "<p> The result is $result</p>";// display the result
+
+
+
     ?>
 </body>
 </html>
